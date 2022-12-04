@@ -18,7 +18,7 @@ jobs:
     - name: Build
       run: dotnet build --no-restore
     - name: Publish for win-x64
-      run: dotnet publish -c Release -r win-x64 --self-contained true -p:PublishTrimmed=True -o /dist
+      run: dotnet publish -c ReleaseInvisible -r win-x64 --self-contained true -p:PublishTrimmed=True -o /dist
     - uses: actions/upload-artifact@v3
       with:
         name: release-win-x64
