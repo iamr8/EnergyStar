@@ -18,8 +18,8 @@ jobs:
     - name: Build
       run: dotnet build --no-restore
     - name: Publish for win-x64
-      run: dotnet publish -c Release -r win-x64 --self-contained true -p:PublishTrimmed=True
+      run: dotnet publish -c Release -r win-x64 --self-contained true -p:PublishTrimmed=True -o /dist
     - uses: actions/upload-artifact@v3
       with:
         name: release-win-x64
-        path: /home/runner/work/EnergyStar/EnergyStar/EnergyStar/bin/Release/net6.0/win-x64/publish/EnergyStar.exe
+        path: /dist

@@ -1,5 +1,7 @@
 # EnergyStar
 
+[![.NET](https://github.com/iamr8/EnergyStar/actions/workflows/dotnet.yml/badge.svg)](https://github.com/iamr8/EnergyStar/actions/workflows/dotnet.yml)
+
 EnergyStar is a terrible* Windows application that leverages [Windows EcoQoS API](https://devblogs.microsoft.com/performance-diagnostics/introducing-ecoqos/) to throttle any inactive user process and background applications to improve system thermal and battery life, similar to the process management strategy on modern Apple macOS releases.
 
 ## See It In Action
