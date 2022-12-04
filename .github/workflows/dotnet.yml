@@ -5,7 +5,7 @@ on: [push, pull_request]
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
     - uses: actions/checkout@v3
@@ -19,7 +19,7 @@ jobs:
       run: dotnet build --no-restore
     - name: Publish for win-x64
       run: dotnet publish -c Release -r win-x64 --self-contained true -p:PublishTrimmed=True
-    - name: Publish for win-arm64
+    - uses: actions/upload-artifact@v3
       with:
         name: release-win-x64
         path: /home/runner/work/EnergyStar/EnergyStar/EnergyStar/bin/Release/net6.0/win-x64/publish/EnergyStar.exe
